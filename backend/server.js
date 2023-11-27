@@ -1,5 +1,9 @@
-import express from 'express';
-const PORT  = 5000;
+import app from "./app.js";
+import connectDB from "./config/database.js";
 
-export const app = express();
 
+connectDB();
+
+app.listen(process.env.PORT, ()=>{
+    console.log(`server is running on port ${process.env.PORT}`);
+})
