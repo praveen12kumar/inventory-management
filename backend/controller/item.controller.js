@@ -26,7 +26,7 @@ const deleteItem = async(req, res)=>{
             message:"Item not found",
             })
         }
-        await Item.deleteOne();
+        await item.deleteOne();
         res.status(200).json({
             sucess: true,
             message:"Item deleted successfully",

@@ -44,7 +44,7 @@ const addSaleItem = async (req, res)=>{
 
 const getAllSale = async(req, res) => {
     try {
-        const allSale = await Sale.find({}).populate("description");
+        const allSale = await Sale.find({}).populate("description", );
         res.status(200).json({
             success: true,
             allSale, 
