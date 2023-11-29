@@ -9,6 +9,12 @@ const saleSchema = new mongoose.Schema({
         type:Number,
         required:true,
     },
+    price:{
+        type:Number,
+    },
+    name:{
+        type:String,
+    }
 });
 
 const Sale = mongoose.model('Sale', saleSchema);

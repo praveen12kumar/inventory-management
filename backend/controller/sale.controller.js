@@ -20,9 +20,13 @@ const addSaleItem = async (req, res)=>{
         };
 
         const netQuantity = item.quantity - req.body.quantity;
+        const totalPrice = item.price * req.body.quantity;
+
         const newSaleItem = {
             description: item._id,
             quantity: req.body.quantity,
+            price:totalPrice,
+            name:item.name,
         }
         const newSale = await Sale.create(newSaleItem);
         item.quantity = netQuantity;
@@ -30,7 +34,6 @@ const addSaleItem = async (req, res)=>{
 
        res.status(201).json({
         success: true,
-        item,
         newSale,
        }) 
     } catch (error) {
@@ -45,9 +48,16 @@ const addSaleItem = async (req, res)=>{
 const getAllSale = async(req, res) => {
     try {
         const allSale = await Sale.find({}).populate("description", );
+        const SaleArray = [];
+        allSale.forEach((item)=>{
+            if(item.description !== null){
+                SaleArray.push(item);
+            }
+        })
+        console.log(SaleArray);
         res.status(200).json({
             success: true,
-            allSale, 
+            SaleArray, 
         })
     } catch (error) {
         res.status(500).json({
