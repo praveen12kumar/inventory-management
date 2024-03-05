@@ -1,0 +1,94 @@
+.modal {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .add-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cancel {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: red;
+    padding-top: 15px;
+  }
+  
+  .goal-form {
+    width: 70%;
+    height: 400px;
+    background-color: whitesmoke;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+  }
+  
+  form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    outline: cadetblue;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  input:focus {
+    border: 2px solid cadetblue;
+  }
+  
+  label {
+    width: 100%;
+    color: rgb(52, 82, 83);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-right: 5px;
+  }
+  
+  .itemCategory {
+    padding-top: 5px;
+    text-align: left;
+  }
+  
+  button {
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #e6e6e6;
+  }
+  
+  button:focus {
+    border: 2px solid cadetblue;
+  }
+  

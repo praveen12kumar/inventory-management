@@ -1,0 +1,47 @@
+.table {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .table thead tr th {
+    height: 3rem;
+    border: 1px solid red;
+    margin: 0 5px;
+  }
+  
+  .table tbody tr td {
+    width: 8rem;
+    height: 3rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-family: poppins;
+  }
+
+  .table-btn:first-child{
+    color: green;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+
+  .table-btn:last-child{
+    color: red;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+  
+
+  @media screen and (max-width:500px) {
+    .table thead tr th {
+      height: 2rem;
+      font-size: 0.9rem;
+      padding: 5px;
+    }
+    .table tbody tr td {
+      height: 3rem;
+      border: 1px solid black;
+      font-size: 0.7rem;
+      font-family: poppins;
+    }
+  }
